@@ -89,6 +89,8 @@ h2 {
   margin-inline: auto;
   max-width: 1360px;
   padding-inline: clamp(1.25rem, 4vw, 4rem);
+  padding-left: max(clamp(1.25rem, 4vw, 4rem), calc(env(safe-area-inset-left) + 1rem));
+  padding-right: max(clamp(1.25rem, 4vw, 4rem), calc(env(safe-area-inset-right) + 1rem));
   width: 100%;
 }
 
@@ -366,6 +368,8 @@ h2 {
   display: flex;
   flex-direction: column;
   padding: 2.5rem 1.5rem;
+  padding-left: max(1.5rem, calc(env(safe-area-inset-left) + 1rem));
+  padding-right: max(1.5rem, calc(env(safe-area-inset-right) + 1rem));
 }
 
 .mobile-nav nav > a:not(.button) {
@@ -1362,6 +1366,7 @@ h2 {
 .site-footer {
   background: var(--green-deep);
   color: rgba(255, 255, 255, 0.72);
+  padding-bottom: env(safe-area-inset-bottom);
   padding-top: clamp(5rem, 9vw, 8rem);
 }
 
@@ -1600,6 +1605,88 @@ h2 {
   .footer-grid { grid-template-columns: 1fr; }
   .footer-lead { padding-bottom: 4rem; }
   .footer-bottom { flex-direction: column; gap: 0.5rem; }
+}
+
+@media (max-width: 420px) {
+  :root { --header-height: 72px; }
+
+  .shell {
+    padding-inline: 1rem;
+    padding-left: max(1rem, calc(env(safe-area-inset-left) + 0.75rem));
+    padding-right: max(1rem, calc(env(safe-area-inset-right) + 0.75rem));
+  }
+
+  .section { padding-block: 4.5rem; }
+  h2 { font-size: 2.55rem; }
+  .eyebrow { font-size: 0.61rem; letter-spacing: 0.16em; }
+  .eyebrow::before { width: 28px; }
+
+  .brand-mark { gap: 0.6rem; }
+  .brand-mark__monogram { height: 37px; width: 37px; }
+  .brand-mark__words strong { font-size: 1.35rem; }
+  .brand-mark__words small { font-size: 0.43rem; letter-spacing: 0.08em; }
+  .menu-button { height: 48px; width: 48px; }
+
+  .mobile-nav nav {
+    padding: 1.75rem 1rem calc(1.75rem + env(safe-area-inset-bottom));
+    padding-left: max(1rem, calc(env(safe-area-inset-left) + 0.75rem));
+    padding-right: max(1rem, calc(env(safe-area-inset-right) + 0.75rem));
+  }
+  .mobile-nav nav > a:not(.button) { font-size: 2.15rem; padding: 0.55rem 0; }
+
+  .home-hero { min-height: 620px; }
+  .home-hero__content { padding-bottom: 6.8rem; }
+  .home-hero h1 { font-size: clamp(3.2rem, 15.5vw, 3.75rem); }
+  .home-hero__copy { font-size: 0.86rem; line-height: 1.65; }
+  .hero-actions { gap: 1.25rem; margin-top: 1.8rem; }
+  .button { min-height: 52px; padding-inline: 1.35rem; }
+  .scroll-cue { bottom: 1rem; left: max(1rem, calc(env(safe-area-inset-left) + 0.75rem)); }
+
+  .section-heading h2 { margin-bottom: 1.2rem; }
+  .section-heading__copy { font-size: 0.94rem; }
+  .services-section .section-heading,
+  .gallery-section .section-heading { margin-bottom: 2.75rem; }
+
+  .service-card__body { padding: 1.35rem; }
+  .service-card h3 { font-size: 1.75rem; }
+  .signature-grid,
+  .story-grid,
+  .about-standard__grid,
+  .service-detail,
+  .contact-grid,
+  .planning-brief__grid { gap: 3rem; }
+
+  .page-hero { height: auto; min-height: calc(100svh - var(--header-height)); }
+  .page-hero__content { padding-bottom: 3.5rem; }
+  .page-hero h1 { font-size: clamp(3.1rem, 15vw, 3.7rem); overflow-wrap: break-word; }
+  .page-hero__content > p:last-child { font-size: 0.92rem; }
+
+  .story-images { min-height: 400px; }
+  .story-images__main { height: 370px; }
+  .story-images__portrait { height: 165px; width: 128px; }
+  .philosophy-grid { margin-top: 3rem; }
+  .philosophy-grid article { min-height: 230px; }
+
+  .service-detail { margin-bottom: 4.5rem; }
+  .service-detail__content h2 { font-size: 2.55rem; }
+  .occasion-list span { font-size: 1.3rem; }
+
+  .gallery-card__image { height: 350px; }
+  .gallery-card:nth-child(3n) .gallery-card__image { height: 270px; }
+  .gallery-card figcaption { align-items: flex-start; flex-direction: column; gap: 0.15rem; }
+
+  .contact-actions .button { width: 100%; }
+  .contact-card { padding: 1.5rem; }
+  .contact-card > div { gap: 0.9rem; }
+  .contact-card a,
+  .contact-card p { font-size: 1.1rem; }
+
+  .closing-cta { min-height: 520px; }
+  .closing-cta h2 { font-size: 3.15rem; }
+  .closing-cta__content { padding-block: 3rem; }
+
+  .footer-lead h2 { font-size: 3.25rem; }
+  .footer-grid { gap: 2.5rem; padding-block: 3.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
