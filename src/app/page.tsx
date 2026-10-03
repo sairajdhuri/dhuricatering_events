@@ -143,7 +143,7 @@ export default function Home() {
       </section>
 
       <section className="closing-cta">
-        <Image src="/images/events/outdoor-floral-stage.jpg" alt="Outdoor floral event stage" fill sizes="100vw" />
+        <Image src="/images/events/colourful-celebration-canopy.jpg" alt="Colourful pink and coral canopy over a daytime celebration" fill sizes="100vw" />
         <div className="closing-cta__overlay" />
         <div className="shell closing-cta__content">
           <p className="eyebrow eyebrow--light">Begin with a conversation</p>
