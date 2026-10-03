@@ -21,20 +21,6 @@ export default function GalleryPage() {
         imageAlt="Grand outdoor wedding stage by Dhuri Decorations"
       />
 
-      <section className="section gallery-section">
-        <div className="shell">
-          <SectionHeading eyebrow="Décor & experiences" title="Designed for the moment—and the memory." description="Each project is developed for its own venue, guest experience and story." />
-          <div className="gallery-masonry">
-            {eventGallery.map((item, index) => (
-              <figure className={`gallery-card gallery-card--${(index % 4) + 1}`} key={item.src}>
-                <div className="gallery-card__image"><Image src={item.src} alt={item.alt} fill sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw" /></div>
-                <figcaption><span>{item.category}</span><strong>{item.title}</strong></figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section section--cream gallery-section">
         <div className="shell">
           <SectionHeading eyebrow="Catering" title="Hospitality, beautifully presented." description="From welcome drinks and live counters to generous buffet service." />
@@ -43,6 +29,20 @@ export default function GalleryPage() {
               <figure className="food-card" key={item.src}>
                 <div><Image src={item.src} alt={item.alt} fill sizes="(max-width: 700px) 92vw, 33vw" /></div>
                 <figcaption>{item.title}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section gallery-section">
+        <div className="shell">
+          <SectionHeading eyebrow="Décor & experiences" title="Designed for the moment—and the memory." description="Each project is developed for its own venue, guest experience and story." />
+          <div className="gallery-masonry">
+            {eventGallery.map((item, index) => (
+              <figure className={`gallery-card gallery-card--${(index % 4) + 1}`} key={item.src}>
+                <div className="gallery-card__image"><Image src={item.src} alt={item.alt} fill sizes="(max-width: 700px) 92vw, (max-width: 1100px) 46vw, 31vw" /></div>
+                <figcaption><span>{item.category}</span><strong>{item.title}</strong></figcaption>
               </figure>
             ))}
           </div>
@@ -59,4 +59,3 @@ export default function GalleryPage() {
     </main>
   );
 }
-
