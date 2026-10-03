@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, Clock3, MapPin, Phone } from "lucide-react";
+import { Clock3, MapPin, Phone } from "lucide-react";
+import InstagramIcon from "@/components/InstagramIcon";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,11 +29,14 @@ export default function ContactPage() {
             <p>When you get in touch, it helps to have your preferred date, venue or area, approximate guest count and the services you are considering. Early ideas are welcome—our team can help develop the rest.</p>
             <div className="contact-actions">
               <a className="button button--dark" href="tel:+919867673219"><Phone size={17} /> Call for an enquiry</a>
-              <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Shimpoli+Borivali+West+Mumbai" target="_blank" rel="noreferrer">View location <ArrowUpRight size={17} /></a>
+              <a className="button button--whatsapp" href="https://wa.me/919867673219" target="_blank" rel="noreferrer"><WhatsAppIcon size={18} /> Contact us on WhatsApp</a>
+              <a className="text-link" href="https://www.instagram.com/dhuricatering?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer">Instagram <InstagramIcon size={17} /></a>
             </div>
           </div>
           <div className="contact-card">
             <div><Phone size={20} /><span><small>Call us</small><a href="tel:+919867673219">+91 98676 73219</a></span></div>
+            <div><WhatsAppIcon size={20} /><span><small>WhatsApp</small><a href="https://wa.me/919867673219" target="_blank" rel="noreferrer">Chat with our team</a></span></div>
+            <div><InstagramIcon size={20} /><span><small>Instagram</small><a href="https://www.instagram.com/dhuricatering?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer">@dhuricatering</a></span></div>
             <div><MapPin size={20} /><span><small>Studio</small><p>Shimpoli, Borivali West<br />Mumbai, Maharashtra 400092</p></span></div>
             <div><Clock3 size={20} /><span><small>Consultations</small><p>By appointment</p></span></div>
           </div>

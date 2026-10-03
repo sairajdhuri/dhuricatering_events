@@ -2,6 +2,7 @@ import { ArrowDown, ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { eventGallery, services } from "@/lib/site-data";
 
 export default function Home() {
@@ -152,6 +153,17 @@ export default function Home() {
           <Link className="button button--light" href="/contact">Plan with Dhuri</Link>
         </div>
       </section>
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/919867673219"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with Dhuri on WhatsApp"
+        title="Chat with us on WhatsApp"
+      >
+        <WhatsAppIcon size={30} />
+        <span>WhatsApp</span>
+      </a>
     </main>
   );
 }
