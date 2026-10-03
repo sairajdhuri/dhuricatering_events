@@ -406,8 +406,8 @@ h2 {
 
 .home-hero__wash {
   background:
-    linear-gradient(90deg, rgba(9, 27, 22, 0.92) 0%, rgba(9, 27, 22, 0.62) 46%, rgba(9, 27, 22, 0.08) 78%),
-    linear-gradient(0deg, rgba(9, 27, 22, 0.54) 0%, transparent 42%);
+    linear-gradient(90deg, rgba(28, 15, 9, 0.94) 0%, rgba(45, 24, 13, 0.68) 46%, rgba(74, 41, 20, 0.08) 78%),
+    linear-gradient(0deg, rgba(26, 13, 8, 0.58) 0%, transparent 42%);
   inset: 0;
   position: absolute;
 }
@@ -1487,7 +1487,7 @@ h2 {
 @media (max-width: 800px) {
   .section { padding-block: 5.25rem; }
   .home-hero { min-height: 680px; }
-  .home-hero__wash { background: linear-gradient(90deg, rgba(9, 27, 22, 0.91), rgba(9, 27, 22, 0.35)), linear-gradient(0deg, rgba(9, 27, 22, 0.6), transparent 55%); }
+  .home-hero__wash { background: linear-gradient(90deg, rgba(28, 15, 9, 0.93), rgba(52, 28, 15, 0.4)), linear-gradient(0deg, rgba(24, 12, 7, 0.64), transparent 55%); }
   .home-hero__content { justify-content: flex-end; padding-bottom: 9rem; }
   .home-hero__details { bottom: 2rem; gap: 1.4rem; left: 5rem; right: auto; }
   .home-hero__details span { font-size: 0.67rem; }

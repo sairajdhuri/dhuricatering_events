@@ -10,8 +10,8 @@ export default function Home() {
       <section className="home-hero">
         <Image
           className="home-hero__image"
-          src="/images/events/lotus-wedding-stage.jpg"
-          alt="Elegant floral wedding stage designed by Dhuri Decorations"
+          src="/images/editorial/candlelit-reception.png"
+          alt="Opulent candlelit wedding reception with floral installations"
           fill
           priority
           sizes="100vw"
