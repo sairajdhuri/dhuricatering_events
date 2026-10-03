@@ -17,34 +17,36 @@ export default function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="site-header">
-      <div className="site-header__inner shell">
-        <BrandMark />
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          {siteNavigation.map((item) => {
-            const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
-            return (
-              <Link className={active ? "is-active" : undefined} href={item.href} key={item.href}>
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-        <Link className="button button--small header-cta" href="/contact">
-          Plan your event
-        </Link>
-        <button
-          className="menu-button"
-          type="button"
-          aria-expanded={open}
-          aria-controls="mobile-navigation"
-          aria-label={open ? "Close navigation" : "Open navigation"}
-          onClick={() => setOpen((current) => !current)}
-        >
-          {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
-        </button>
-      </div>
-      <div className={`mobile-nav${open ? " is-open" : ""}`} id="mobile-navigation">
+    <>
+      <header className="site-header">
+        <div className="site-header__inner shell">
+          <BrandMark />
+          <nav className="desktop-nav" aria-label="Primary navigation">
+            {siteNavigation.map((item) => {
+              const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+              return (
+                <Link className={active ? "is-active" : undefined} href={item.href} key={item.href}>
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+          <Link className="button button--small header-cta" href="/contact">
+            Plan your event
+          </Link>
+          <button
+            className="menu-button"
+            type="button"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
+            aria-label={open ? "Close navigation" : "Open navigation"}
+            onClick={() => setOpen((current) => !current)}
+          >
+            {open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </button>
+        </div>
+      </header>
+      <div className={`mobile-nav${open ? " is-open" : ""}`} id="mobile-navigation" aria-hidden={!open}>
         <nav aria-label="Mobile navigation">
           {siteNavigation.map((item, index) => (
             <Link href={item.href} key={item.href} onClick={() => setOpen(false)}>
@@ -54,6 +56,6 @@ export default function SiteHeader() {
           <Link className="button" href="/contact" onClick={() => setOpen(false)}>Start a conversation</Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }

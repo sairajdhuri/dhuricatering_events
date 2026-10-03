@@ -352,10 +352,12 @@ h2 {
   display: none;
   inset: var(--header-height) 0 0;
   opacity: 0;
+  overflow-y: auto;
   position: fixed;
   transform: translateY(-14px);
   transition: opacity 220ms ease, visibility 220ms ease, transform 220ms ease;
   visibility: hidden;
+  z-index: 90;
 }
 
 .mobile-nav.is-open {
